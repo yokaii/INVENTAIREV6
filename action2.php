@@ -2,7 +2,7 @@
 session_start();
 $A = $_SESSION["reference"];
 $B = $_SESSION["zone"];
-include ("db.php");
+include ("db2.php");
 
 //Recupération résultat requête REF
 $query = "SELECT * FROM allref WHERE REF = '$A' "; 
