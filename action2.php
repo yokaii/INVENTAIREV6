@@ -8,73 +8,9 @@ include ("db.php");
 $sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
 //$sql = $db->prepare("SELECT * FROM allref WHERE REF = '$A' ");
 //$sql->execute();
+$fetch = $sql->fetch();
+extract($fetch);
 
-$REF =  $sql->fetchColumn(0);
-
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$CODE =  $sql->fetchColumn(1);
-
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' "); 
-$FAM =  $sql->fetchColumn(2); 
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$DETAIL =  $sql->fetchColumn(3);
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' "); 
-$FIBRE =  $sql->fetchColumn(4);
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$COULEUR =  $sql->fetchColumn(5);
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$BACK =  $sql->fetchColumn(6);
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$GRS =  $sql->fetchColumn(7);
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$LARG =  $sql->fetchColumn(8); 
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$LONG =  $sql->fetchColumn(9); 
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$HDIAM =  $sql->fetchColumn(10);
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$PNET =  $sql->fetchColumn(11);
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$PBRUT =  $sql->fetchColumn(12); 
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$MARQUE =  $sql->fetchColumn(13); 
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$REMARQUE =  $sql->fetchColumn(14); 
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$DEFAUT =  $sql->fetchColumn(15);
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$ACTION =  $sql->fetchColumn(16); 
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$INT_CONDITION =  $sql->fetchColumn(17); 
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$MANDRIN =  $sql->fetchColumn(18); 
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$NB =  $sql->fetchColumn(19); 
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$DP_CODE =  $sql->fetchColumn(20); 
-
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
-$COM_DE =  $sql->fetchColumn(21);
 
 $CODEinv	=	$_POST['CODEMODIF'];
 $DETAILinv	=	$_POST['DETAILMODIF'];
