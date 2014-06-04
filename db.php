@@ -6,5 +6,6 @@ try {
 } catch (Exception $e) {
 	echo 'Impossible de se connecter à la base de donnée !';
 	die();
+	
 }
 ?>
