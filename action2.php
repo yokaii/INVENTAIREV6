@@ -6,7 +6,7 @@ $C = $_SESSION["table"];
 include ("db.php");
 
 //Recupration rsultat requte REF
-$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$sql = $db->query("SELECT * FROM $C WHERE REF = '$A' ");
 $fetch = $sql->fetch();
 extract($fetch);
 
