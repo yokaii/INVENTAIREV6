@@ -2,35 +2,79 @@
 session_start();
 $A = $_SESSION["reference"];
 $B = $_SESSION["zone"];
-include ("db2.php");
+include ("db.php");
 
 //Recupération résultat requête REF
-$query = "SELECT * FROM allref WHERE REF = '$A' "; 
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+//$sql = $db->prepare("SELECT * FROM allref WHERE REF = '$A' ");
+//$sql->execute();
 
-$result = mysql_query($query) or die("<br>** Error database premiere requete : ".mysql_error()."</b><br>$sql");
-$row = mysql_fetch_row($result);
-$REF =  $row[0];
-$CODE =  $row[1]; 
-$FAM =  $row[2]; 
-$DETAIL =  $row[3]; 
-$FIBRE =  $row[4]; 
-$COULEUR =  $row[5]; 
-$BACK =  $row[6]; 
-$GRS =  $row[7]; 
-$LARG =  $row[8]; 
-$LONG =  $row[9]; 
-$HDIAM =  $row[10]; 
-$PNET =  $row[11]; 
-$PBRUT =  $row[12]; 
-$MARQUE =  $row[13]; 
-$REMARQUE =  $row[14]; 
-$DEFAUT =  $row[15]; 
-$ACTION =  $row[16]; 
-$INT_CONDITION =  $row[17]; 
-$MANDRIN =  $row[18]; 
-$NB =  $row[19]; 
-$DP_CODE =  $row[20]; 
-$COM_DE =  $row[21];
+$REF =  $sql->fetchColumn(0);
+
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$CODE =  $sql->fetchColumn(1);
+
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' "); 
+$FAM =  $sql->fetchColumn(2); 
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$DETAIL =  $sql->fetchColumn(3);
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' "); 
+$FIBRE =  $sql->fetchColumn(4);
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$COULEUR =  $sql->fetchColumn(5);
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$BACK =  $sql->fetchColumn(6);
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$GRS =  $sql->fetchColumn(7);
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$LARG =  $sql->fetchColumn(8); 
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$LONG =  $sql->fetchColumn(9); 
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$HDIAM =  $sql->fetchColumn(10);
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$PNET =  $sql->fetchColumn(11);
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$PBRUT =  $sql->fetchColumn(12); 
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$MARQUE =  $sql->fetchColumn(13); 
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$REMARQUE =  $sql->fetchColumn(14); 
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$DEFAUT =  $sql->fetchColumn(15);
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$ACTION =  $sql->fetchColumn(16); 
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$INT_CONDITION =  $sql->fetchColumn(17); 
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$MANDRIN =  $sql->fetchColumn(18); 
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$NB =  $sql->fetchColumn(19); 
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$DP_CODE =  $sql->fetchColumn(20); 
+
+$sql = $db->query("SELECT * FROM allref WHERE REF = '$A' ");
+$COM_DE =  $sql->fetchColumn(21);
 
 $CODEinv	=	$_POST['CODEMODIF'];
 $DETAILinv	=	$_POST['DETAILMODIF'];
@@ -52,17 +96,12 @@ $MANDRINinv	=	 $_POST['MANDRINMODIF'];
 $NBinv		=	 $_POST['NBMODIF'];
 $COMinv		=	 $_POST['COM_INV'];
 	
-$query1 = "INSERT INTO `inventaire`(`REF`, `CODE`, `FAM`, `DETAIL`, `FIBRE`, `COULEUR`, `BACK`, `GRS`, `LARG`, `LONG`, `HDIAM`, `PNET`, `PBRUT`, `MARQUE`, `REMARQUE`, `DEFAUT`, `ACTION`, `INT_CONDITION`, `MANDRIN`, `NB`, `DP_CODE`, `COM_DE`, `CODEinv`, `DETAILinv`, `FIBREinv`, `COULEURinv`, `BACKinv`, `GRSinv`, `LARGinv`, `LONGinv`, `HDIAMinv`, `PNETinv`, `PBRUTinv`, `MARQUEinv`, `REMARQUEinv`, `DEFAUTinv`, `ACTIONinv`, `INT_CONDITIONinv`, `MANDRINinv`, `NBinv`, `DP_CODEinv`, `COM_INV`)
+$query1 = $db->query("INSERT INTO `inventaire`(`REF`, `CODE`, `FAM`, `DETAIL`, `FIBRE`, `COULEUR`, `BACK`, `GRS`, `LARG`, `LONG`, `HDIAM`, `PNET`, `PBRUT`, `MARQUE`, `REMARQUE`, `DEFAUT`, `ACTION`, `INT_CONDITION`, `MANDRIN`, `NB`, `DP_CODE`, `COM_DE`, `CODEinv`, `DETAILinv`, `FIBREinv`, `COULEURinv`, `BACKinv`, `GRSinv`, `LARGinv`, `LONGinv`, `HDIAMinv`, `PNETinv`, `PBRUTinv`, `MARQUEinv`, `REMARQUEinv`, `DEFAUTinv`, `ACTIONinv`, `INT_CONDITIONinv`, `MANDRINinv`, `NBinv`, `DP_CODEinv`, `COM_INV`)
 VALUES ('$REF','$CODE','$FAM','$DETAIL','$FIBRE','$COULEUR','$BACK','$GRS','$LARG','$LONG','$HDIAM','$PNET','$PBRUT','$MARQUE',
 '$REMARQUE','$DEFAUT','$ACTION','$INT_CONDITION','$MANDRIN','$NB','$DP_CODE','$COM_DE','$CODEinv','$DETAILinv','$FIBREinv','$COULEURinv','$BACKinv',
 '$GRSinv','$LARGinv','$LONGinv','$HDIAMinv','$PNETinv','$PBRUTinv','$MARQUEinv','$REMARQUEinv','$DEFAUTinv','$ACTIONinv',
-'$CONDITIONinv','$MANDRINinv','$NBinv','$B','$COMinv')";
+'$CONDITIONinv','$MANDRINinv','$NBinv','$B','$COMinv')");
 
-$req = mysql_query($query1) or die ("<br>** Error in database table <b>".mysql_error()."</b><br>");
-
-
-
-mysql_close();
 
 ?>
 <html>
