@@ -1,25 +1,22 @@
 <?php
 session_start();
 $B = $_SESSION['zone'];
-include "db2.php";
+include "db.php";
 
 //Requête pour récupérer l'id de la zone
-$query = "SELECT id FROM zone WHERE ZONE = '$B' ";
-$result = mysql_query($query);
+$sql = $db->query("SELECT id FROM zone WHERE ZONE = '$B' ");
+$fetch = $sql->fetch();
+$A = $fetch['id'];
+$id = $A + 1;
 
-//Requête pour récupérer le résultat de la requête précendente en ajoutant 1 
-//pour passer a la zone suivante
-$A = mysql_result($result, 0);
-$id = $A +1;
 
 //Requête pour récupérer la zone de la variable $id 
-$query2 = "SELECT ZONE FROM zone WHERE id = '$id' ";
-$result1 = mysql_query($query2);
+$fetch2 = $db->query("SELECT ZONE FROM zone WHERE id = '$id' ");
+$result1 = $fetch2->fetch();
 
 //Requête pour récupérer le résultat de la requête précendente
-$C = mysql_result($result1, 0);
-$D = $C;
-$_SESSION['zone'] = $D;
+$C = $result1['ZONE'];
+$_SESSION['zone'] = $C;
 
 
 
@@ -57,7 +54,7 @@ $_SESSION['zone'] = $D;
  </body>
 
 <div class="content">
-		<div class="title-head"><br><?php echo "La zone est : " .$D ;?></div>
+		<div class="title-head"><br><?php echo "La zone est : " .$C ;?></div>
 		
 </div>
 
