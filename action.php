@@ -74,55 +74,102 @@ $filename = "img/$A.jpg";
     	} 
 	}     
 ?>
-<tr>
-	</tr>
-	<?php foreach ($row as $value => $key):
-		if ($value !== "DECHET"){
-		echo '<td>'.$value.'</td>';
-		}		
-	?>
-		
-	<?php endforeach ?>
-</tr>
-<tr>
-	<?php foreach ($row as $value => $key):
-	
-	if ($value !== "DECHET"){
-		echo '<td>'.$key.'</td>';
-	}?>	 	
-	<?php endforeach ?>
-</tr>
+
+
 <form id="Form1" action="action2.php" method="post">
  <label>
   <input id="check1" type="checkbox" name="DECHETMODIF" value="1" <?php if($row['DECHET'] == 1) echo 'checked'?> >
     DECHET</label>
+			
 			<tr>
-				<td></td>
-				<td><input type="text" name="CODEMODIF"  style="width:50px; height:30px" value="<?= isset($_POST['CODE']) ? $_POST['CODE'] : ''; ?>" autofocus/> </td>
-				<td></td>
-				<td><input type="text" name="DETAILMODIF" style="width:150px; height:30px;" /></td>
-				<td><input type="text" name="FIBREMODIF" style="width:50px; height:30px;" /></td>
-				<td><input type="text" name="COULEURMODIF" style="width:100px; height:30px;" /></td>
-				<td><input type="text" name="BACKMODIF" style="width:100px; height:30px;" /></td>
-				<td><input type="text" name="GRSMODIF" style="width:50px; height:30px;" /></td>
-				<td><input type="text" name="LARGMODIF" style="width:50px; height:30px;" /></td>
-				<td><input type="text" name="LONGMODIF" style="width:50px; height:30px;" /></td>
-				<td><input type="text" name="HDIAMMODIF" style="width:50px; height:30px;" /></td>
-				<td><input type="text" name="PNETMODIF" style="width:50px; height:30px;" /></td>
-				<td><input type="text" name="PBRUTMODIF" style="width:50px; height:30px;" /></td>
-				<td><input type="text" name="MARQUEMODIF" style="width:50px; height:30px;" /></td>
-				<td><input type="text" name="REMARQUEMODIF" style="width:150px; height:30px;" /></td>
-				<td><input type="text" name="DEFAUTMODIF" style="width:150px; height:30px;" /></td>
-				<td><input type="text" name="ACTIONMODIF" style="width:150px; height:30px;" /></td>
-				<td><input type="text" name="CONDITIONMODIF" style="width:150px; height:30px;" /></td>
-				<td><input type="text" name="MANDRINMODIF" style="width:50px; height:30px;" /></td>
-				<td><input type="text" name="NBMODIF" style="width:50px; height:30px;" /></td>
-				<td><b><?php echo "$zonechoose" ?></b></td>
-				<td><input type="textarea" name="COM_INV" style="width:250px; height:30px;" /></td>
-				
-					
+			<td class='police'>REF</td>
+			<td class='police'>CODE</td>
+			<td class='police'>Famille</td>
+			<td class='police'>Details</td>
+			<td class='police'>Fibre</td>
+			<td class='police'>Couleur</td>
+			<td class='police'>Back</td>
+			<td class='police'>GRS</td>
+			<td class='police'>Largeur</td>
+			<td class='police'>Longueur</td>
+			<td class='police'>HDIAM</td>
+			
+			</tr>
+			<tr>
+			<td class='police'><?php echo $row['REF']?></td>
+			<td class='police'><?php echo $row['CODE']?></td>
+			<td class='police'><?php echo $row['FAM']?></td>
+			<td class='police'><?php echo $row['DETAIL']?></td>
+			<td class='police'><?php echo $row['FIBRE']?></td>
+			<td class='police'><?php echo $row['COULEUR']?></td>
+			<td class='police'><?php echo $row['BACK']?></td>
+			<td class='police'><?php echo $row['GRS']?></td>
+			<td class='police'><?php echo $row['LARG']?></td>
+			<td class='police'><?php echo $row['LONG']?></td>
+			<td class='police'><?php echo $row['HDIAM']?></td>
 			</tr>
 
+			<tr>
+			<td class='police'></td>
+			<td class='police'><input type="text" name="CODEMODIF" style="width:60px; height:30px" value="<?= isset($_POST['CODE']) ? $_POST['CODE'] : ''; ?>" autofocus/> </td>
+			<td class='police'></td>
+			<td class='police'><textarea class="police" class="police" name="DETAILMODIF" style="width:150px; height:50px;" /></textarea></td>
+			<td class='police'><input type="text" name="FIBREMODIF" style="width:150px; height:30px;" /></td>
+			<td class='police'><textarea class="police" name="COULEURMODIF" style="width:250px; height:50px;" /></textarea></td>
+			<td class='police'><input type="text" name="BACKMODIF" style="width:150px; height:30px;" /></td>
+			<td class='police'><input type="text" name="GRSMODIF" style="width:50px; height:30px;" /></td>
+			<td class='police'><input type="text" name="LARGMODIF" style="width:50px; height:30px;" /></td>
+			<td class='police'><input type="text" name="LONGMODIF" style="width:50px; height:30px;" /></td>
+			<td class='police'><input type="text" name="HDIAMMODIF" style="width:50px; height:30px;" /></td>
+			
+			</tr>
+
+
+			<tr>
+			<tr>
+			<tr>
+			<tr>
+			<td class='police'>PDNET</td>
+			<td class='police'>PBRUT</td>
+			<td class='police'>Marque</td>
+			<td class='police'>Remarque</td>
+			<td class='police'>Defaut</td>
+			<td class='police'>Action</td>
+			<td class='police'>Int_Condition</td>
+			<td class='police'>Mandrin</td>
+			<td class='police'>Nombre</td>
+			<td class='police'>DP_Code</td>
+			<td class='police'>Commentaire_DE</td>
+			</tr>	
+			
+			<tr>
+			<td class='police'><?php echo $row['PNET']?></td>
+			<td class='police'><?php echo $row['PBRUT']?></td>
+			<td class='police'><?php echo $row['MARQUE']?></td>
+			<td class='police'><?php echo $row['REMARQUE']?></td>
+			<td class='police'><?php echo $row['DEFAUT']?></td>
+			<td class='police'><?php echo $row['ACTION']?></td>
+			<td class='police'><?php echo $row['INT_CONDITION']?></td>
+			<td class='police'><?php echo $row['MANDRIN']?></td>
+			<td class='police'><?php echo $row['NB']?></td>
+			<td class='police'><?php echo $row['DP_CODE']?></td>
+			<td class='police'><?php echo $row['COM_DE']?></td>
+			</tr>
+
+			<tr>
+			<td class='police'><input type="text" name="PNETMODIF" style="width:50px; height:30px;" /></td>
+			<td class='police'><input type="text" name="PBRUTMODIF" style="width:50px; height:30px;" /></td>
+			<td class='police'><input type="text" name="MARQUEMODIF" style="width:50px; height:30px;" /></td>
+			<td class='police'><textarea class="police" name="REMARQUEMODIF" style="width:150px; height:50px;" /></textarea></td>
+			<td class='police'><textarea class="police" name="DEFAUTMODIF" style="width:150px; height:50px;" /></textarea></td>
+			<td class='police'><textarea class="police" name="ACTIONMODIF" style="width:250px; height:50px;" /></textarea></td>
+			<td class='police'><textarea class="police" name="CONDITIONMODIF" style="width:150px; height:50px;" /></textarea></td>
+			<td class='police'><input type="text" name="MANDRINMODIF" style="width:50px; height:30px;" /></td>
+			<td class='police'><input type="text" name="NBMODIF" style="width:50px; height:30px;" /></td>
+			<td class='police'><b><?php echo "$zonechoose" ?></b></td>
+			<td class='police'><textarea class="police" name="COM_INV" style="width:250px; height:50px;" /></textarea></td>
+			</tr>	
+	
 <table>
 	 
 	   <tr><td><input class="valid" type="button" value="Validation" onClick="confirmDechet();" /></td>
