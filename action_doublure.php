@@ -157,7 +157,7 @@ $filename = "img/$A.jpg";
  <label>
   <input id="check1" type="checkbox" name="DECHETMODIF" value="1" <?php if($row['DECHET'] == 1) echo 'checked'?> >
     DECHET</label>
-		
+<table border="2">			
 		<tr>
 			<td class='police'>REF</td>
 			<td class='police'>CODE</td>
@@ -246,7 +246,7 @@ $filename = "img/$A.jpg";
 			<td class='police'><b><?php echo "$zonechoose" ?></b></td>
 			<td class='police'><textarea class="police" name="COM_INV" style="width:250px; height:50px;" /></textarea></td>
 			</tr>		
-
+</table>
 <table>
 	 
 	   <tr><td><input class="valid" type="button" value="Validation" onClick="confirmDechet();" /></td>
@@ -256,6 +256,7 @@ $filename = "img/$A.jpg";
 	<form action="index.php" method="post">
 		<td><input class="valid" type="submit" value="X"/></td></tr>
 	</form>
-	</body>
 </table>
+	</body>
+
 
