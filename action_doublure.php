@@ -154,6 +154,7 @@ $filename = "img/$A.jpg";
  <label>
   <input id="check1" type="checkbox" name="DECHETMODIF" value="1" <?php if($row['DECHET'] == 1) echo 'checked'?> >
     DECHET</label>
+    <br/><br/>
 <table border="2">			
 		<tr>
 			<td class='police'>REF</td>
