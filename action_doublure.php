@@ -45,10 +45,8 @@ $filename1 = "img/$A.jpg";
 	} 
 ?>			
 <table border ="2">
-			<tr>
 			<td class='police'>REF</td>
 			<td class='police'>CODE</td>
-			<td class='police'>Famille</td>
 			<td class='police'>Details</td>
 			<td class='police'>Fibre</td>
 			<td class='police'>Couleur</td>
@@ -57,27 +55,28 @@ $filename1 = "img/$A.jpg";
 			<td class='police'>Largeur</td>
 			<td class='police'>Longueur</td>
 			<td class='police'>HDIAM</td>
+			<td class='police'>PDNET</td>
 			
 			</tr>
 			<tr>
 			<td class='police'><?php echo $row1['REF']?></td>
-			<td class='police'><?php echo $row1['CODE']?></td>
-			<td class='police'><?php echo $row1['FAM']?></td>
-			<td class='police'><?php echo $row1['DETAIL']?></td>
-			<td class='police'><?php echo $row1['FIBRE']?></td>
-			<td class='police'><?php echo $row1['COULEUR']?></td>
-			<td class='police'><?php echo $row1['BACK']?></td>
-			<td class='police'><?php echo $row1['GRS']?></td>
-			<td class='police'><?php echo $row1['LARG']?></td>
-			<td class='police'><?php echo $row1['LONG']?></td>
-			<td class='police'><?php echo $row1['HDIAM']?></td>
+			<td class='police'><?php echo $row1['CODEinv']?></td>
+			<td class='police'><?php echo $row1['DETAILinv']?></td>
+			<td class='police'><?php echo $row1['FIBREinv']?></td>
+			<td class='police'><?php echo $row1['COULEURinv']?></td>
+			<td class='police'><?php echo $row1['BACKinv']?></td>
+			<td class='police'><?php echo $row1['GRSinv']?></td>
+			<td class='police'><?php echo $row1['LARGinv']?></td>
+			<td class='police'><?php echo $row1['LONGinv']?></td>
+			<td class='police'><?php echo $row1['HDIAMinv']?></td>
+			<td class='police'><?php echo $row1['PNETinv']?></td>
 			</tr>
 
 			<tr>
 			<tr>
 			<tr>
 			<tr>
-			<td class='police'>PDNET</td>
+			
 			<td class='police'>PBRUT</td>
 			<td class='police'>Marque</td>
 			<td class='police'>Remarque</td>
@@ -87,22 +86,20 @@ $filename1 = "img/$A.jpg";
 			<td class='police'>Mandrin</td>
 			<td class='police'>Nombre</td>
 			<td class='police'>DP_Code</td>
-			<td class='police'>Commentaire_DE</td>
 			<td class='police'>Dechet</td>
 			</tr>	
 			
 			<tr>
-			<td class='police'><?php echo $row1['PNET']?></td>
-			<td class='police'><?php echo $row1['PBRUT']?></td>
-			<td class='police'><?php echo $row1['MARQUE']?></td>
-			<td class='police'><?php echo $row1['REMARQUE']?></td>
-			<td class='police'><?php echo $row1['DEFAUT']?></td>
-			<td class='police'><?php echo $row1['ACTION']?></td>
-			<td class='police'><?php echo $row1['INT_CONDITION']?></td>
-			<td class='police'><?php echo $row1['MANDRIN']?></td>
-			<td class='police'><?php echo $row1['NB']?></td>
-			<td class='police'><?php echo $row1['DP_CODE']?></td>
-			<td class='police'><?php echo $row1['COM_DE']?></td>
+
+			<td class='police'><?php echo $row1['PBRUTinv']?></td>
+			<td class='police'><?php echo $row1['MARQUEinv']?></td>
+			<td class='police'><?php echo $row1['REMARQUEinv']?></td>
+			<td class='police'><?php echo $row1['DEFAUTinv']?></td>
+			<td class='police'><?php echo $row1['ACTIONinv']?></td>
+			<td class='police'><?php echo $row1['INT_CONDITIONinv']?></td>
+			<td class='police'><?php echo $row1['MANDRINinv']?></td>
+			<td class='police'><?php echo $row1['NBinv']?></td>
+			<td class='police'><?php echo $row1['DP_CODEinv']?></td>
 			<td class='police'><?php echo $row1['DECHET']?></td>
 			</tr>
 </table>
