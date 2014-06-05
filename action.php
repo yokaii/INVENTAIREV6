@@ -65,6 +65,7 @@ $filename = "img/$A.jpg";
 	 $sql2 = $db->query("SELECT * FROM oldref WHERE REF = $A"); 	
 	 if($sql2->rowCount() > 0)
 		{
+			echo "
 			<DIV align='left' STYLE='font-family: Arial Black; color: black; font-size: 20pt; margin-top: -20pt'>
 				 <p>Bobine normalement pas au dépot					 
 			</DIV>";
