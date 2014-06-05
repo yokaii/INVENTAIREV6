@@ -135,9 +135,9 @@ $filename = "img/$A.jpg";
 	 $sql2 = $db->query("SELECT * FROM oldref WHERE REF = $A"); 	
 	 if($sql2->rowCount() > 0)
 		{
-			<DIV align='left' STYLE='font-family: Arial Black; color: black; font-size: 20pt; margin-top: -20pt'>
-				<p>Bobine normalement pas au dépot					 
-			</DIV>";
+			echo "  <DIV align='left' STYLE='font-family: Arial Black; color: black; font-size: 20pt; margin-top: -20pt'>
+				 <p>Bobine normalement pas au dépot					 
+				</DIV>";
 			if (file_exists($filename)) {    //Vérifie si le fichier existe et renvoie la bonne photo ou la photo de demande.
 				echo "<img src='img/$A.jpg' width='180px' height='200px'><br><table border='3'>";
 			} else {
