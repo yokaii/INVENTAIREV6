@@ -4,6 +4,13 @@ include ("db.php");
 $_SESSION['reference'] = htmlspecialchars($_POST['ref']);	
 $_SESSION['zone'] = $_SESSION["zone"];
 $zonechoose	=	 $_SESSION["zone"];
+$R = $_SESSION['reference'];
+
+$sqlInventaire = $db->query("SELECT * FROM inventaire WHERE REF = $R"); 
+if($sqlInventaire->rowCount() > 0) //Verifie si le produit existe déjà dans l'inventaire
+    { 
+		header('Location: action_doublure.php');
+    } 
 ?>
 
 <!DOCTYPE html>
@@ -91,10 +98,9 @@ $filename = "img/$A.jpg";
     DECHET</label>
 			<tr>
 				<td></td>
-
 				<td><input type="text" name="CODEMODIF"  style="width:50px; height:30px" value="<?= isset($_POST['CODE']) ? $_POST['CODE'] : ''; ?>" autofocus/> </td>
 				<td></td>
-				<td><textarea name="DETAILMODIF" style="width:150px; height:30px;" /></textarea></td>
+				<td><input type="text" name="DETAILMODIF" style="width:150px; height:30px;" /></td>
 				<td><input type="text" name="FIBREMODIF" style="width:50px; height:30px;" /></td>
 				<td><input type="text" name="COULEURMODIF" style="width:100px; height:30px;" /></td>
 				<td><input type="text" name="BACKMODIF" style="width:100px; height:30px;" /></td>
@@ -105,14 +111,14 @@ $filename = "img/$A.jpg";
 				<td><input type="text" name="PNETMODIF" style="width:50px; height:30px;" /></td>
 				<td><input type="text" name="PBRUTMODIF" style="width:50px; height:30px;" /></td>
 				<td><input type="text" name="MARQUEMODIF" style="width:50px; height:30px;" /></td>
-				<td><textarea name="REMARQUEMODIF" style="width:150px; height:30px;" /></textarea></td>
-				<td><textarea name="DEFAUTMODIF" style="width:150px; height:30px;" /></textarea></td>
-				<td><textarea name="ACTIONMODIF" style="width:150px; height:30px;" /></textarea></td>
-				<td><textarea name="CONDITIONMODIF" style="width:150px; height:30px;" /></textarea></td>
+				<td><input type="text" name="REMARQUEMODIF" style="width:150px; height:30px;" /></td>
+				<td><input type="text" name="DEFAUTMODIF" style="width:150px; height:30px;" /></td>
+				<td><input type="text" name="ACTIONMODIF" style="width:150px; height:30px;" /></td>
+				<td><input type="text" name="CONDITIONMODIF" style="width:150px; height:30px;" /></td>
 				<td><input type="text" name="MANDRINMODIF" style="width:50px; height:30px;" /></td>
 				<td><input type="text" name="NBMODIF" style="width:50px; height:30px;" /></td>
 				<td><b><?php echo "$zonechoose" ?></b></td>
-				<td><textarea name="COM_INV" style="width:250px; height:30px;" /></textarea></td>
+				<td><input type="textarea" name="COM_INV" style="width:250px; height:30px;" /></td>
 				
 					
 			</tr>
