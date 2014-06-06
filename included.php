@@ -11,8 +11,6 @@
 	$search_inventaire = $search_inv->fetch();
 	$maxi = max ($search_oldref,$search_allref,$search_inventaire); 
 	$maxi1 = intval($maxi['max(REF)']) + 1;
-	print_r($maxi);
-	echo $maxi1;
 	 ?>
 <html>
 <head>
