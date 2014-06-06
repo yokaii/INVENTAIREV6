@@ -1,10 +1,9 @@
 <?php
 session_start();
 include ("db.php");	
-
 $_SESSION['reference'] = htmlspecialchars($_POST['max_ref']);	
 $_SESSION['zone'] = $_POST['zone'];
-$zonechoose = $_POST['zone'];
+$zonechoose	=	 $_POST['zone'];
 $A = $_SESSION['reference'];
 
 ?>
@@ -35,14 +34,12 @@ $A = $_SESSION['reference'];
 	<body>
 	
 	<div class="content">
-		<div class="title-head"><h1><center><br><u>référence: <?php echo $A ?> zone :<?php echo $zonechoose ?></u></center></h1></div>
-		
-	</div>
-
-<br/>
-
+		<div class="title-head"><h1><center><br><font color="black"><u>zone</u> :</font><?php echo $zonechoose ?></center></h1></div>	
+		<div class="title-head"><h1><center><br><font color="black"><u>référence</u> :</font><?php echo $A ?></center></h1></div>			
+	</div>	
+	<br/><br/>
 	<DIV align='left' STYLE='font-family: Arial Black; color: blue; font-size: 20pt; margin-top: -20pt'>
-	 <p>Merci de prendre une photo si possible, etc ....					 
+	 <p>Merci de prendre une photo si possible					 
 	</DIV>
 			
 
