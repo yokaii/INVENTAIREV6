@@ -234,7 +234,7 @@ $filename = "img/$A.jpg";
 			<tr>
 			<td class='police'><input type="text" name="PNETMODIF" style="width:50px; height:30px;" /></td>
 			<td class='police'><input type="text" name="PBRUTMODIF" style="width:50px; height:30px;" /></td>
-			<td class='police'><input type="text" name="MARQUEMODIF" style="width:50px; height:30px;" /></td>
+			<td class='police'><input type="text" name="MARQUEMODIF" style="width:100px; height:30px;" /></td>
 			<td class='police'><textarea class="police" name="REMARQUEMODIF" style="width:150px; height:50px;" /></textarea></td>
 			<td class='police'><textarea class="police" name="DEFAUTMODIF" style="width:150px; height:50px;" /></textarea></td>
 			<td class='police'><textarea class="police" name="ACTIONMODIF" style="width:150px; height:50px;" /></textarea></td>
@@ -252,7 +252,7 @@ $filename = "img/$A.jpg";
 		
 
 	<form action="index.php" method="post">
-		<td><input class="valid" type="submit" value="X"/></td></tr>
+		<td><input class="cancel" type="submit" value="X"/></td></tr>
 	</form>
 </table>
 	</body>
