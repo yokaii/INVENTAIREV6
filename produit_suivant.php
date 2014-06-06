@@ -1,6 +1,14 @@
 <?php require_once('db.php'); ?>
 <?php 
 session_start();
+$search_a = $db->query("SELECT max(REF) FROM allref");
+$search_allref = $search_a->fetch();
+$search_o = $db->query("SELECT max(REF) FROM oldref");
+$search_oldref = $search_o->fetch();
+$search_inv = $db->query("SELECT max(REF) FROM inventaire");
+$search_inventaire = $search_inv->fetch();
+$maxi = max ($search_oldref,$search_allref,$search_inventaire); 
+$maxi1 = intval($maxi['max(REF)']) + 1;
 $B = $_SESSION["zone"];
 ?>
 
@@ -50,6 +58,15 @@ $B = $_SESSION["zone"];
 <form action="index.php" method="post">
 <p><input class="retour" type="submit" value="Retour Accueil"></p>
 </form>	
+
+
+<form action="action_nouveau.php" method="post" >
+<input type="hidden" name="max_ref" value="<?= $maxi1; ?>"/>
+<input type="hidden" name="zone" value="<?=$B?>">
+<p><input class="retour" type="submit" value="Nouveau Produit"></p>
+</form>
+
+
 </div>
 
 
