@@ -1,8 +1,12 @@
 <?php
 session_start();
 include ("db.php");	
-$A = $_SESSION["reference"];
-$zonechoose	= $_SESSION["zone"];
+
+$_SESSION['reference'] = htmlspecialchars($_POST['max_ref']);	
+$_SESSION['zone'] = $_POST['zone'];
+$zonechoose = $_POST['zone'];
+$A = $_SESSION['reference'];
+
 ?>
 
 <!DOCTYPE html>
