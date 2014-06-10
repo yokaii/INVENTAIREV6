@@ -10,6 +10,12 @@ $sql = $db->query("SELECT * FROM $C WHERE REF = '$A' ");
 $fetch = $sql->fetch();
 extract($fetch);
 
+if(isset($_POST['REFMODIF'])){
+	$REFinv		= $_POST['REFMODIF']; 
+}
+else{
+	$REFinv		=	 0 ;  //Le checkbox n'a pas été cochée
+}
 $CODEinv	=	$_POST['CODEMODIF'];
 $DETAILinv	=	$_POST['DETAILMODIF'];
 $FIBREinv	=	 $_POST['FIBREMODIF'];
@@ -36,9 +42,9 @@ else{
 	$DECHET		=	 0 ;  //Le checkbox n'a pas été cochée
 }
 	
-$query1 = $db->query ("INSERT INTO `inventaire`(`REF`, `CODE`, `FAM`, `DETAIL`, `FIBRE`, `COULEUR`, `BACK`, `GRS`, `LARG`, `LONG`, `HDIAM`, `PNET`, `PBRUT`, `MARQUE`, `REMARQUE`, `DEFAUT`, `ACTION`, `INT_CONDITION`, `MANDRIN`, `NB`, `DP_CODE`, `COM_DE`, `CODEinv`, `DETAILinv`, `FIBREinv`, `COULEURinv`, `BACKinv`, `GRSinv`, `LARGinv`, `LONGinv`, `HDIAMinv`, `PNETinv`, `PBRUTinv`, `MARQUEinv`, `REMARQUEinv`, `DEFAUTinv`, `ACTIONinv`, `INT_CONDITIONinv`, `MANDRINinv`, `NBinv`, `DP_CODEinv`, `COM_INV`, `DECHET`)
+$query1 = $db->query ("INSERT INTO `inventaire`(`REF`, `CODE`, `FAM`, `DETAIL`, `FIBRE`, `COULEUR`, `BACK`, `GRS`, `LARG`, `LONG`, `HDIAM`, `PNET`, `PBRUT`, `MARQUE`, `REMARQUE`, `DEFAUT`, `ACTION`, `INT_CONDITION`, `MANDRIN`, `NB`, `DP_CODE`, `COM_DE`, `REFinv`, `CODEinv`, `DETAILinv`, `FIBREinv`, `COULEURinv`, `BACKinv`, `GRSinv`, `LARGinv`, `LONGinv`, `HDIAMinv`, `PNETinv`, `PBRUTinv`, `MARQUEinv`, `REMARQUEinv`, `DEFAUTinv`, `ACTIONinv`, `INT_CONDITIONinv`, `MANDRINinv`, `NBinv`, `DP_CODEinv`, `COM_INV`, `DECHET`)
 VALUES ('$REF','$CODE','$FAM','$DETAIL','$FIBRE','$COULEUR','$BACK','$GRS','$LARG','$LONG','$HDIAM','$PNET','$PBRUT','$MARQUE',
-'$REMARQUE','$DEFAUT','$ACTION','$INT_CONDITION','$MANDRIN','$NB','$DP_CODE','$COM_DE','$CODEinv','$DETAILinv','$FIBREinv','$COULEURinv','$BACKinv',
+'$REMARQUE','$DEFAUT','$ACTION','$INT_CONDITION','$MANDRIN','$NB','$DP_CODE','$COM_DE','$REFinv','$CODEinv','$DETAILinv','$FIBREinv','$COULEURinv','$BACKinv',
 '$GRSinv','$LARGinv','$LONGinv','$HDIAMinv','$PNETinv','$PBRUTinv','$MARQUEinv','$REMARQUEinv','$DEFAUTinv','$ACTIONinv',
 '$CONDITIONinv','$MANDRINinv','$NBinv','$B','$COMinv','$DECHET')");
 
