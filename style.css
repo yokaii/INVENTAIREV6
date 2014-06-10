@@ -242,11 +242,11 @@ p{
 .cancel:hover {
 	cursor: pointer;
 	padding: 20px 55px 18px 60px;
-	border: 1px solid green;
+	border: 1px solid red;
 	border-radius: 8px;
 	margin-top: 10px;
 	margin-left: 4%;
-	background-color: green;
+	background-color: red;
 	color: white;
 	font-weight: bold;
 	font-size: 5.0mm;
