@@ -185,7 +185,7 @@ $filename = "img/$A.jpg";
 			</tr>
 
 			<tr>
-			<td class='police'></td>
+			<td class='police'><input type="text" name="REFMODIF" style="width:60px; height:30px" /></td>
 			<td class='police'><input type="text" name="CODEMODIF" style="width:60px; height:30px" value="<?= isset($_POST['CODE']) ? $_POST['CODE'] : ''; ?>" autofocus/> </td>
 			<td class='police'></td>
 			<td class='police'><textarea class="police" class="police" name="DETAILMODIF" style="width:150px; height:50px;" /></textarea></td>
