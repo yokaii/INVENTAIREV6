@@ -34,14 +34,13 @@ $zone1 = $row1['DP_CODEinv'];
 	<body>
 	
 	<div class="content">
-		<div class="title-head"><h1><center><br><u>Attention un autre produit de référence <?php echo $A ?> existe déjà dans la zone :<?php echo $zone1 ?></u></center></h1></div>
-		
+		<div class="title-head"><h1><center><br><font color="black"><u>Attention un autre produit de référence</u>:</font><?php echo $A ?><font color="black"><u><br><br>existe déjà dans la zone </u>:</font><?php echo $zone1 ?></u></center></h1></div>
 	</div>
 
 <?php
 $filename1 = "img/$A.jpg";
 	if (file_exists($filename1)) {    //Vérifie si le fichier existe et renvoie la bonne photo ou la photo de demande.
-		echo "<img src='img/$A.jpg' width='180px' height='200px'><br><table border='3'>";
+		echo "<img src='img/$A.jpg' width='180px' height='200px'><br><table border='3'><br><br>";
 	} 
 ?>			
 <table border ="2">
@@ -105,7 +104,7 @@ $filename1 = "img/$A.jpg";
 </table>
 <br/>
 <div class="content">
-		<div class="title-head"><h1><center><br><u>Vous êtes dans la zone : <?php echo $zonechoose ?></u></center></h1></div>
+		<div class="title-head"><h1><center><br><font color="black"><u>Vous êtes dans la zone</u>:</font><?php echo $zonechoose ?></center></h1></div>
 		
 </div>
 <br/>
@@ -117,11 +116,11 @@ $filename = "img/$A.jpg";
     if($sql->rowCount() > 0) 
     { 
 			if (file_exists($filename)) {    //Vérifie si le fichier existe et renvoie la bonne photo ou la photo de demande.
-				echo "<img src='img/$A.jpg' width='180px' height='200px'><br><table border='3'>";
+				echo "<img src='img/$A.jpg' width='180px' height='200px'><br><table border='3'><br><br>";
 			} else {
 				echo "
 				<DIV align='left' STYLE='font-family: Arial Black; color: blue; font-size: 20pt; margin-top: -20pt'>
-				 <p>Merci de prendre une photo si possible						 
+				 <p>Merci de prendre une photo si possible<br><br>						 
 				</DIV>";
 			}
               
@@ -140,7 +139,7 @@ $filename = "img/$A.jpg";
 			} else {
 				echo "
 				<DIV align='left' STYLE='font-family: Arial Black; color: blue; font-size: 20pt; margin-top: -20pt'>
-				 <p>Merci de prendre une photo si possible						 
+				 <p>Merci de prendre une photo si possible<br><br>						 
 				</DIV>";
 			}
               
