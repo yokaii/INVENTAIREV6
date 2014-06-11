@@ -121,19 +121,19 @@ $filename = "img/$A.jpg";
 
 			<tr>
 			<td class='police'></td>
-			<td class='police'><input type="text" name="CODEMODIF" style="width:60px; height:30px" value="<?= isset($_POST['CODE']) ? $_POST['CODE'] : ''; ?>" autofocus/> </td>
+			<td class='police'><input class="police" type="text" name="CODEMODIF" style="width:100px; height:50px" value="<?= isset($_POST['CODE']) ? $_POST['CODE'] : ''; ?>" autofocus/> </td>
 			<td class='police'></td>
-			<td class='police'><textarea class="police" class="police" name="DETAILMODIF" style="width:150px; height:50px;" /></textarea></td>
-			<td class='police'><input type="text" name="FIBREMODIF" style="width:150px; height:30px;" /></td>
-			<td class='police'><textarea class="police" name="COULEURMODIF" style="width:150px; height:50px;" /></textarea></td>
-			<td class='police'><input type="text" name="BACKMODIF" style="width:150px; height:30px;" /></td>
-			<td class='police'><input type="text" name="GRSMODIF" style="width:50px; height:30px;" /></td>
-			<td class='police'><input type="text" name="LARGMODIF" style="width:50px; height:30px;" /></td>
-			<td class='police'><input type="text" name="LONGMODIF" style="width:50px; height:30px;" /></td>
-			<td class='police'><input type="text" name="HDIAMMODIF" style="width:50px; height:30px;" /></td>
+			<td class='police'><textarea class="police" class="police" name="DETAILMODIF" style="width:200px; height:80px;" /></textarea></td>
+			<td class='police'><input type="text" name="FIBREMODIF" style="width:150px; height:80px;" /></td>
+			<td class='police'><textarea class="police" name="COULEURMODIF" style="width:150px; height:80px;" /></textarea></td>
+			<td class='police'><input type="text" name="BACKMODIF" style="width:150px; height:80px;" /></td>
+			<td class='police'><input type="text" name="GRSMODIF" style="width:50px; height:80px;" /></td>
+			<td class='police'><input type="text" name="LARGMODIF" style="width:50px; height:80px;" /></td>
+			<td class='police'><input type="text" name="LONGMODIF" style="width:50px; height:80px;" /></td>
+			<td class='police'><input type="text" name="HDIAMMODIF" style="width:50px; height:80px;" /></td>
 			
 			</tr>
-
+ 
 
 			<tr>
 			<tr>
@@ -167,17 +167,17 @@ $filename = "img/$A.jpg";
 			</tr>
 
 			<tr>
-			<td class='police'><input type="text" name="PNETMODIF" style="width:50px; height:30px;" /></td>
-			<td class='police'><input type="text" name="PBRUTMODIF" style="width:50px; height:30px;" /></td>
-			<td class='police'><input type="text" name="MARQUEMODIF" style="width:100px; height:30px;" /></td>
-			<td class='police'><textarea class="police" name="REMARQUEMODIF" style="width:150px; height:50px;" /></textarea></td>
-			<td class='police'><textarea class="police" name="DEFAUTMODIF" style="width:150px; height:50px;" /></textarea></td>
-			<td class='police'><textarea class="police" name="ACTIONMODIF" style="width:150px; height:50px;" /></textarea></td>
-			<td class='police'><textarea class="police" name="CONDITIONMODIF" style="width:150px; height:50px;" /></textarea></td>
-			<td class='police'><input type="text" name="MANDRINMODIF" style="width:50px; height:30px;" /></td>
-			<td class='police'><input type="text" name="NBMODIF" style="width:50px; height:30px;" /></td>
+			<td class='police'><input class='police' type="text" name="PNETMODIF" style="width:50px; height:80px;" /></td>
+			<td class='police'><input class='police' type="text" name="PBRUTMODIF" style="width:50px; height:80px;" /></td>
+			<td class='police'><input class='police' type="text" name="MARQUEMODIF" style="width:150px; height:80px;" /></td>
+			<td class='police'><textarea class="police" name="REMARQUEMODIF" style="width:220px; height:80px;" /></textarea></td>
+			<td class='police'><textarea class="police" name="DEFAUTMODIF" style="width:150px; height:80px;" /></textarea></td>
+			<td class='police'><textarea class="police" name="ACTIONMODIF" style="width:150px; height:80px;" /></textarea></td>
+			<td class='police'><textarea class="police" name="CONDITIONMODIF" style="width:150px; height:80px;" /></textarea></td>
+			<td class='police'><input class='police' type="text" name="MANDRINMODIF" style="width:50px; height:80px;" /></td>
+			<td class='police'><input class='police' type="text" name="NBMODIF" style="width:50px; height:80px;" /></td>
 			<td class='police'><b><?php echo "$zonechoose" ?></b></td>
-			<td class='police'><textarea class="police" name="COM_INV" style="width:250px; height:50px;" /></textarea></td>
+			<td class='police'><textarea class="police" name="COM_INV" style="width:250px; height:80px;" /></textarea></td>
 			</tr>	
 </table>	
 <table>
