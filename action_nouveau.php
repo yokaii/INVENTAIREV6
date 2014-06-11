@@ -39,7 +39,7 @@ $A = $_SESSION['reference'];
 	</div>	
 	<br/><br/>
 	<DIV align='left' STYLE='font-family: Arial Black; color: blue; font-size: 20pt; margin-top: -20pt'>
-	 <p>Merci de prendre une photo si possible					 
+	 <p>Merci de prendre une photo si possible<br><br>				 
 	</DIV>
 			
 
