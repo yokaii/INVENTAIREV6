@@ -39,7 +39,7 @@ if($sqlInventaire->rowCount() > 0) //Verifie si le produit existe déjà dans l'
 	<body>
 	
 	<div class="content">
-		<div class="title-head"><h1><center>ZONE :<br><u><?php echo $zonechoose ?></u></center></h1></div>
+		<div class="title-head"><h1><center><font color="black"><u>zone</u> :</font><?php echo $zonechoose ?></center><br></h1></div>
 		
 	</div>
 <?php
@@ -50,11 +50,11 @@ $filename = "img/$A.jpg";
     if($sql->rowCount() > 0) 
     { 
 			if (file_exists($filename)) {    //Vérifie si le fichier existe et renvoie la bonne photo ou la photo de demande.
-				echo "<img src='img/$A.jpg' width='180px' height='200px'><br><table border='3'>";
+				echo "<img src='img/$A.jpg' width='180px' height='200px'><br><table border='3'><br><br>";
 			} else {
 				echo "
-				<DIV align='left' STYLE='font-family: Arial Black; color: blue; font-size: 20pt; margin-top: -20pt'>
-				 <p>Merci de prendre une photo si possible						 
+				<DIV align='left' STYLE='font-family: Arial Black; color: black; font-size: 20pt; margin-top: -20pt'>
+				 <p>Merci de prendre une photo si possible<br><br>						 
 				</DIV>";
 			}
               
@@ -73,8 +73,8 @@ $filename = "img/$A.jpg";
 				echo "<img src='img/$A.jpg' width='180px' height='200px'><br><table border='3'>";
 			} else {
 				echo "
-				<DIV align='left' STYLE='font-family: Arial Black; color: blue; font-size: 20pt; margin-top: -20pt'>
-				 <p>Merci de prendre une photo si possible						 
+				<DIV align='left' STYLE='font-family: Arial Black; color: black; font-size: 20pt; margin-top: -20pt'>
+				 <p>Merci de prendre une photo si possible<br><br>						 
 				</DIV>";
 			}
               
